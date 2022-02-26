@@ -8,6 +8,40 @@ body {
 }
 
 header {
+    display: block;
     background-color: black;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
     color: white;
+    position: fixed;
+    top: 0;
+    padding: 0px;
+    left: 0;
+}
+
+.banner {
+    display: flex;
+}
+
+.profile img {
+    height: 350px;
+    width: 350px;
+}
+
+#signature img {
+    height: 150px;
+    width: 150px;
+}
+
+
+
+
+
+
+footer {
+    background-color: black;
+    height: 100px;
+    width: auto;
+    background-size: cover;
 }
