@@ -7,7 +7,11 @@ body {
     background: linear-gradient(to right,  lightgray 25%, white 75%);
 }
 
-header {
+body a {
+    color: white;
+}
+
+.header {
     display: block;
     background-color: black;
     background-size: cover;
@@ -20,8 +24,16 @@ header {
     left: 0;
 }
 
-.banner {
-    display: flex;
+.main {
+
+    
+  
+}
+
+.banner {   
+    
+    display: block;
+    color: white;
 }
 
 .profile img {
@@ -40,7 +52,9 @@ header {
 
 
 footer {
+    display: block;
     background-color: black;
+    color:white;
     height: 100px;
     width: auto;
     background-size: cover;
