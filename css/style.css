@@ -12,7 +12,8 @@ body a {
 }
 
 .header {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: black;
     background-size: cover;
     height: 100px;
@@ -22,40 +23,126 @@ body a {
     top: 0;
     padding: 0px;
     left: 0;
+    border: 5px dotted red;
 }
 
 .main {
-
-    
-  
+   margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    border: 3px dotted green;
+    height: auto;
+    margin-right: 140px;
 }
 
 .banner {   
-    
-    display: block;
+    top: 45px;
+    display: flex;
     color: white;
+    border: 6px dotted yellow;
+    height: 550px;
+    
 }
 
 .profile img {
     height: 350px;
     width: 350px;
-}
-
-#signature img {
-    height: 150px;
-    width: 150px;
+    float: right;
 }
 
 
 
+aside {
+    display: flex;
+    right: 0;
+    top: 108px;
+    height: 100%;
+    background-color: darkgrey;
+    list-style: none;
+    position: fixed;
+    width: 100px;
+
+}
+
+.icons li {
+    list-style: none;
+}
+
+#social-media { 
+display: flex;
+border: 5px dotted blue;
+color: white;
+
+}
+
+#social-media li {
+    color: black;
+}
 
 
+/* side navigation menu */
 
-footer {
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border: 1px solid lightcoral;
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    color: black;
+    font-size: 25px;
     display: block;
+    transition: 0.3s;
+    
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: blue;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+/* style button */
+.btn {
+
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+
+
+}
+
+.footer {
+    display: flex;
     background-color: black;
     color:white;
     height: 100px;
     width: auto;
     background-size: cover;
+    border: 5px dotted hotpink;
 }
