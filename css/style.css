@@ -64,20 +64,34 @@ aside {
 
 }
 
-.icons li {
-    list-style: none;
+.icons {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    border: 2px dotted green;
+    height: 90%;
+    font-size: 35px;
+    
 }
+
+.icons a {
+   
+    padding: 50px;
+   
+}
+
+
+
 
 #social-media { 
 display: flex;
 border: 5px dotted blue;
 color: white;
+align-items: center;
+justify-content: center;
 
 }
 
-#social-media li {
-    color: black;
-}
 
 
 /* side navigation menu */
@@ -86,7 +100,7 @@ color: white;
     height: 100%;
     width: 0px;
     position: fixed;
-    z-index: 6;
+    z-index: 1;
     left: 0;
     background-color: white;
     color: black;
@@ -126,14 +140,16 @@ color: white;
 
 /* style button */
 .btn {
-
+    display: flex;
+    flex-flow: row nowrap;
     background-color: black;
     border: none;
     color: white;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
-
+  
+    
 
 }
 
