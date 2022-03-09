@@ -1,3 +1,4 @@
+
 html {
     font-size: 16px;
     font-family: sans-serif;
@@ -14,42 +15,120 @@ body a {
 .header {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    align-items: center;
+    justify-content: space-around;
     background-size: cover;
+    font-family: noticia;
     height: 100px;
     width: 100%;
-    color: white;
+    color: black;
     position: fixed;
     top: 0;
     padding: 0px;
     left: 0;
-    border: 5px dotted red;
+    background: linear-gradient(to right,  lightgray 25%, white 75%);
+    z-index: 1;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+  
+}
+
+
+
+.header nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 300px;
+    width: 1100px;
+    padding: 15px 15px;
+    
+
 }
 
 .main {
-   margin-top: 150px;
+    margin-top: 115px;
     display: flex;
     flex-direction: column;
-    border: 3px dotted green;
     height: auto;
     margin-right: 140px;
+    width: 1900px;
 }
 
 .banner {   
-    top: 45px;
+    top: 5px;
     display: flex;
-    color: white;
-    border: 6px dotted yellow;
-    height: 550px;
+    color: black;
+    height: 850px;
+    width: 1900px;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.banner a {
+    color: black;
+    text-decoration: none;
+}
+
+.banner h1 {
+    font-family: noticia;
+    font-size: 95px;
+    margin: 5px;
     
 }
 
+#description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: darkgray;
+    height: 850px;
+}
+
+#description a {
+    color: orangered;
+    font-weight: bold;
+    
+}
+
+
+#profile-pic {
+    display: flex;
+    flex-direction: column;
+    padding-left: 250px;
+    align-self: flex-end;
+    
+}
+
+
 .profile img {
-    height: 350px;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     float: right;
 }
 
+
+figcaption {
+    text-align: right;
+    font-family: Mr De Haviland;
+    font-size: 40px;
+    transform: skew(0deg, -10deg);
+    padding: 25px;
+    margin-top: 15px;
+    
+    
+  
+}
+
+#clock {
+    opacity: 5%;
+    
+}
 
 
 aside {
@@ -57,26 +136,30 @@ aside {
     right: 0;
     top: 108px;
     height: 100%;
-    background-color: darkgrey;
     list-style: none;
     position: fixed;
     width: 100px;
 
 }
 
+/* position and decorating social media icons */
 .icons {
     display: flex;
     flex-flow: column;
     align-content: center;
-    border: 2px dotted green;
+    align-items: center;
+    justify-content: center;
     height: 90%;
-    font-size: 35px;
+    font-size: 1.50rem;
+    width: 60px;
+    text-shadow: 2px 2px black;
     
 }
 
 .icons a {
    
     padding: 50px;
+    color: darkgray;
    
 }
 
@@ -84,11 +167,10 @@ aside {
 
 
 #social-media { 
-display: flex;
-border: 5px dotted blue;
-color: white;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
 
 }
 
@@ -136,10 +218,12 @@ justify-content: center;
 @media screen and (max-height: 450px) {
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
+
 }
 
 /* style button */
 .btn {
+
     display: flex;
     flex-flow: row nowrap;
     background-color: black;
@@ -148,13 +232,176 @@ justify-content: center;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
-  
+}
+
+
+.featured-work {
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: 3px dotted red;
+    text-align: center;
+    font-family: noticia;
     
+}
+
+.featured-work {
+    font-size: 32px;
+}
+
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px dotted purple ;
+    width: 100%;
+    height: auto;
+
+}
+
+.projects p {
+    position: absolute;
+    width: 350px;
+    top: 1400px;
+    left: 1000px;
+    font-family: noticia;
+    font-size: 24px;
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.projects a {
+    color: orange;
+}
+
+.projects img {
+    width: 480px;
+    height: 630px;
+   
+}
+
+#Portfolio-poster {
+    align-self: flex-start;
+    padding-left: 405px;
+}
+
+.project-button {
+    display: flex;
+    flex-direction: column;
+    border: 2px dotted blue;
+    
+}
+
+.project-button h4 {
+    line-height: .1;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-button h6 {
+    margin-top: 10px;
+    line-height: .1;
+    font-size: 1.4rem;
+}
+
+.proj-btn {
+
+    position: absolute;
+    border: 9px dotted green;
+    align-self: center;
+    margin-top: 45px;
+    opacity: 0;
+
+}
+
+#book-cover {
+    position:absolute;
+    align-self: flex-end;
+    top: 450px;
+    border: 2px dotted darkorchid;
+    margin-right: 0;
+    width: 900px;
+}
+
+#book-cover img {
+    width: 1050px;
+
+}
+
+#zeus-project {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-left: 405px;
+    padding-top: 150px;
+    border: 3px solid red;
+    
+}
+
+
+#zeus-project a{
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.divider {
+    
+    
+}
+/* Section to display skills and experience */
+
+
+#skills-title {
+    font-family: noticia;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.tech {
+    display: flex;
+    justify-content: space-around;
+    border: 3px dotted green;
+    width: 100%;
+    font-size: 2.8rem;
+    
+}
+
+.tech img {
+    min-width: 25px;
+    min-height: 25px;
+    width: 43px;
+    height: 43px;
+} 
+
+#final-cut-logo {
+    height: 55px;
+}
+
+#inspiration-title {
+    font-family: noticia;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+
+.inspiration {
+    display: flex;
+    justify-content: space-around;
+    border: 3px dotted blue;
+    width: 100%;
 
 }
 
 .footer {
     display: flex;
+    justify-content: space-around;
     background-color: black;
     color:white;
     height: 100px;
