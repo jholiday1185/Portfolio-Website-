@@ -20,11 +20,11 @@
         <div id="nav-title">
             <strong><p>Justin Holiday</p></strong>
         </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+        <nav id="nav-menu">
+            <a id="nav-home" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">Home</a>
+            <a id="nav-about" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">About</a>
+            <a id="nav-projects" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">Projects</a>
+            <a id="nav-contact" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">Contact</a>
         </nav>
     </div>    
     <div class="main">
@@ -64,32 +64,38 @@
         <div class="featured-work">
             <H2>Justin Holiday's Latest Projects</H2>
             <div class="projects">
-                <div id="Portfolio-poster">
+                <div id="portfolio-poster">
                     <img src="./images/Porfolio Website Poster.png" alt="This website" title="Portfolio Website this site is will have ongoing development">
-                    <div class="project-button">
-                        <H4>My Porfolio</H4>
-                        <div class="divider">&ndash;</div>
-                        <H6>Free</H6>
-                        <button class="proj-btn" onclick="">Buy Now</button>
+                    <div class="project-button" id="btn1"> 
+                        <a href="#">
+                            <H4>My Portfolio</H4>
+                            <hr class="divider">
+                            <H6>Free</H6>
+                        </a>   
                     </div>
+                    <a href="#" class="buy-now" id="bn1">Buy Now</a>
                 </div>
                 <div id="book-cover">
                     <img src="./images/Be Great book cover.png" alt="Be Great Book Cover" title="Not actually a book, just a new way to display website with Photoshop">
-                    <div class="project-button">
-                        <H4>Mock Website</H4>
-                        <div class="divider">&ndash;</div>
-                        <H6>Free</H6>
-                        <button class="proj-btn" onclick="">Buy Now</button>
+                    <div class="project-button" id="btn2">
+                        <a href="#">
+                            <H4>Mock Website</H4>
+                            <hr class="divider">
+                            <H6>Free</H6>
+                        </a>   
                     </div>
+                    <a href="#" class="buy-now" id="bn2">Buy Now</a>
                 </div>
                 <div id="zeus-project">
                     <img src="./images/Zeus Mountain Cover.png" alt="Pic of Brown Boerbol Mastiff Zeus" title="Boerbol Mastiff Zeus"> 
-                    <div class="project-button">
-                        <H4>Life of Zeus</H4>
-                        <div class="divider">&ndash;</div>
-                        <H6>Free</H6>
-                        <button class="proj-btn" onclick="">Buy Now</button>
+                    <div class="project-button"  id="btn3"> 
+                        <a href="#">
+                            <H4>Life of Zeus</H4>
+                            <hr class="divider">
+                            <H6>Free</H6>
+                        </a>
                     </div>
+                    <a href="#" class="buy-now" id="bn3">Buy Now</a>
                 </div>
                 <div>
                     <p>Updated frequently with excerpts from the various adventures of Zeus.  From 11 weeks old until present. Zeus is a South African Boerbol Mastiff that lives in Pittsurgh.

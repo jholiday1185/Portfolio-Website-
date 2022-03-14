@@ -27,13 +27,19 @@ body a {
     padding: 0px;
     left: 0;
     background: linear-gradient(to right,  lightgray 25%, white 75%);
-    z-index: 1;
+    z-index: 3;
 }
 
 .header a {
     color: black;
     text-decoration: none;
   
+}
+
+.header a:hover {
+    color: white;
+    background-color: black;
+    padding: 8px;
 }
 
 
@@ -71,6 +77,7 @@ body a {
 .banner a {
     color: black;
     text-decoration: none;
+
 }
 
 .banner h1 {
@@ -188,7 +195,7 @@ aside {
     color: black;
     overflow-x: hidden;
     transition: 0.5s;
-    border: 1px solid lightcoral;
+  
 }
 
 /* The navigation menu links */
@@ -227,20 +234,23 @@ aside {
     display: flex;
     flex-flow: row nowrap;
     background-color: black;
-    border: none;
     color: white;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
 }
 
+#btn2 {
+
+    margin-top: 0;
+
+}
 
 .featured-work {
 
     display: flex;
     position: relative;
     flex-direction: column;
-    border: 3px dotted red;
     text-align: center;
     font-family: noticia;
     
@@ -250,15 +260,24 @@ aside {
     font-size: 32px;
 }
 
+#portfolio-poster {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-left: 405px;
+
+    
+}
+
 
 
 .projects {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 3px dotted purple ;
     width: 100%;
     height: auto;
 
@@ -277,8 +296,11 @@ aside {
 }
 
 .projects a {
-    color: orange;
+    position: relative;
+    color: orangered;
+    text-decoration: none;
 }
+
 
 .projects img {
     width: 480px;
@@ -286,15 +308,26 @@ aside {
    
 }
 
-#Portfolio-poster {
-    align-self: flex-start;
-    padding-left: 405px;
-}
 
 .project-button {
-    display: flex;
+    align-self: center;
+    width: 225px;
     flex-direction: column;
-    border: 2px dotted blue;
+    z-index: 2;
+    opacity: 1;
+    background: lightgrey;
+    margin-top: 20px;
+    
+}
+
+.project-button a {
+    
+    color: black;
+}
+
+
+.project-button:hover {
+    opacity: 0;
     
 }
 
@@ -308,53 +341,61 @@ aside {
     margin-top: 10px;
     line-height: .1;
     font-size: 1.4rem;
+    
 }
 
-.proj-btn {
+.divider {
+    margin-top: 35px;
+    width: 15px;
+}
+
+
+.buy-now {
 
     position: absolute;
-    border: 9px dotted green;
+    top: -145px;
     align-self: center;
-    margin-top: 45px;
-    opacity: 0;
-
+    padding: 40px;
+    
 }
 
+
+
 #book-cover {
+
+    display: flex;
+    flex-direction: column;
     position:absolute;
     align-self: flex-end;
     top: 450px;
-    border: 2px dotted darkorchid;
     margin-right: 0;
     width: 900px;
+  
 }
 
 #book-cover img {
     width: 1050px;
+    margin-bottom: -65px;
 
 }
 
 #zeus-project {
+
     display: flex;
     flex-direction: column;
     align-self: flex-start;
     padding-left: 405px;
     padding-top: 150px;
-    border: 3px solid red;
+  
+   
     
 }
 
 
-#zeus-project a{
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-}
 
-.divider {
-    
-    
-}
+
+
+
 /* Section to display skills and experience */
 
 
@@ -367,7 +408,6 @@ aside {
 .tech {
     display: flex;
     justify-content: space-around;
-    border: 3px dotted green;
     width: 100%;
     font-size: 2.8rem;
     
@@ -396,6 +436,7 @@ aside {
     justify-content: space-around;
     border: 3px dotted blue;
     width: 100%;
+    
 
 }
 
@@ -404,7 +445,7 @@ aside {
     justify-content: space-around;
     background-color: black;
     color:white;
-    height: 100px;
+    height: 400px;
     width: auto;
     background-size: cover;
     border: 5px dotted hotpink;
