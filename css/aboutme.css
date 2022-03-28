@@ -1,0 +1,209 @@
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right,  lightgray 25%, white 75%);
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: noticia;
+
+}
+
+html body {
+
+    height: 100%;
+}
+
+
+
+nav {
+
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  
+     
+}
+nav h2 {
+    display: block;
+
+}
+
+
+nav ul {
+  
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+
+nav li {
+   
+    list-style: none;
+
+
+}
+
+
+
+#nav-list a {
+    padding-left: 25px;
+    color: black;
+    text-decoration: none;
+    perspective: 12000px;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+
+}
+
+
+
+#nav-list a:hover {
+    
+    color: white;
+    background-color: black;
+    padding: 6px;
+    transform: rotateX(360deg);
+}
+
+
+
+
+
+
+
+main {
+    display: block;
+    
+}
+
+ 
+#about-me{
+
+        display: block;
+       
+}
+
+.about-me-container {
+
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.about-me-text-container {
+    display: block;
+ 
+}
+
+#profile-pic {
+    
+    width: 350px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    margin-left: 100px;
+    
+}
+
+@media only screen and (max-width: 1200px) {
+
+    body {
+        margin-left: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 680px) {
+
+    body {
+        
+        margin-left: 55px;
+    }
+    
+    main {
+
+        display: flex;
+        flex-direction: column;
+      
+     
+    }
+
+    .about-me-container {
+       
+        flex-direction: column;
+    }
+
+
+      
+}
+
+/* Style the search box */
+
+#mySearch {
+
+    width: 40%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    
+}
+
+/*Style the navigation menu */
+
+
+#my-projects {
+
+    list-style-type: none;
+    padding: 0;
+   
+  
+}
+
+
+/*Style the navigation links */
+
+#my-projects li a {
+
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+#my-projects li a:hover {
+
+    background-color: orangered;
+}
+
+
+
+/*Style skills section*/
+
+#skills {
+    margin-top: 100px;
+   
+}
+
+
+#skills i {
+
+    font-size: 3.2rem; 
+    padding: 25px;
+}
+#skills img {
+    padding-left: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+
+

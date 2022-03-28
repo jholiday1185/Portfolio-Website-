@@ -6,10 +6,13 @@ html {
 
 body {
     background: linear-gradient(to right,  lightgray 25%, white 75%);
+    max-width: 1600px;
 }
 
 body a {
     color: white;
+    
+    
 }
 
 .header {
@@ -30,29 +33,97 @@ body a {
     z-index: 3;
 }
 
+
+
 .header a {
+
     color: black;
     text-decoration: none;
-  
+    perspective: 12000px;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
 }
 
-.header a:hover {
-    color: white;
-    background-color: black;
-    padding: 8px;
-}
 
 
 
 .header nav {
+
     display: flex;
     align-items: flex-end;
     gap: 300px;
     width: 1100px;
     padding: 15px 15px;
-    
+    overflow: hidden;
 
 }
+
+
+
+#nav-projects {
+    
+    float: left;
+    overflow: hidden;
+  
+}
+
+#nav-projects .dropbtn {
+
+    display: inline-flex;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 5px 5px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+    
+}
+
+
+.header a:hover, .dropdown:hover .dropbtn, .dropbtn:focus, button:hover {
+    color: white;
+    background-color: black;
+    padding: 8px;
+    transform: rotateY(360deg);
+}
+
+.dropdown-content {
+
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+    
+}
+
+.dropdown-content a {
+
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: white;
+}
+
+.dropdown-content a:hover {
+
+    background-color: orangered;
+    transition: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+
+
 
 .main {
     margin-top: 115px;
@@ -60,7 +131,8 @@ body a {
     flex-direction: column;
     height: auto;
     margin-right: 140px;
-    width: 1900px;
+    width: 100%;
+    
 }
 
 .banner {   
@@ -68,11 +140,13 @@ body a {
     display: flex;
     color: black;
     height: 850px;
-    width: 1900px;
+    width: 100%;
     align-items: center;
     justify-items: center;
+  
 
 }
+
 
 .banner a {
     color: black;
@@ -95,6 +169,7 @@ body a {
     width: 50%;
     background-color: darkgray;
     height: 850px;
+    
 }
 
 #description a {
@@ -109,7 +184,6 @@ body a {
     flex-direction: column;
     padding-left: 250px;
     align-self: flex-end;
-    
 }
 
 
@@ -117,6 +191,12 @@ body a {
     height: 400px;
     width: 400px;
     float: right;
+}
+
+figure {
+    display: flex;
+    
+    align-items: center;
 }
 
 
@@ -132,10 +212,74 @@ figcaption {
   
 }
 
-#clock {
-    opacity: 5%;
+
+
+
+
+
+@media only screen and (max-width: 680px){
+
+  
+
+    .header {
+
+        position: relative;
+    }
+
+    #nav-title p {
+
+        font-size: 60px;
+    }
+
+    #nav-menu {
+       
+        display: none;
+        
+    }
+
+   .banner {
+       flex-direction: column;
+       justify-content: center;
+       width: auto;
+   }
+
+   .profile {
+   
+    text-align: center;
     
+   }
+
+   .profile h1 {
+        display: none;
+   }
+
+   #profile-pic {
+
+    padding-left: 0;
+
+   }
+
+   #description {
+       height: 200px;
+   }
+
+   .profile img {
+
+        width: 400px;
+        height: 400px;
+        
+   }
+
+
+
 }
+
+
+
+
+
+
+
 
 
 aside {
@@ -146,6 +290,7 @@ aside {
     list-style: none;
     position: fixed;
     width: 100px;
+    z-index: 6;
 
 }
 
@@ -167,13 +312,52 @@ aside {
    
     padding: 50px;
     color: darkgray;
-   
+    perspective: 12000px;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    
+}
+
+.fa-facebook:hover {
+    
+    background-color:#3B5998;
+    background-size: 50%;
+    color: white;
+    padding: 25px;
+    transform: rotateY(360deg);
+}
+
+.fa-twitter:hover {
+
+    background-color: #55ACEE;
+    background-size: 50%;
+    color: white;
+    padding: 25px;
+    transform: rotateY(360deg);
+}
+
+.fa-linkedin:hover {
+
+    background-color: #007bb5;
+    background-size: 50%;
+    color: white;
+    padding: 25px;
+    transform: rotateY(360deg);
+}
+
+.fa-instagram:hover {
+
+    background-color: #125688;
+    background-size: 50%;
+    color: white;
+    padding: 25px;
+    transform: rotateY(360deg);
 }
 
 
 
-
 #social-media { 
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,67 +367,16 @@ aside {
 
 
 
-/* side navigation menu */
-
-.sidenav {
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    background-color: white;
-    color: black;
-    overflow-x: hidden;
-    transition: 0.5s;
-  
-}
-
-/* The navigation menu links */
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    color: black;
-    font-size: 25px;
-    display: block;
-    transition: 0.3s;
-    
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: blue;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-
-}
-
-/* style button */
-.btn {
-
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: black;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
 #btn2 {
 
-    margin-top: 0;
+ margin-right: 60px;
 
+}
+
+#bn2 {
+
+    margin-right: 60px;
 }
 
 .featured-work {
@@ -253,46 +386,63 @@ aside {
     flex-direction: column;
     text-align: center;
     font-family: noticia;
+    font-size: 1.5rem;
+    width: 100%;
+
     
 }
 
-.featured-work {
-    font-size: 32px;
-}
+
 
 #portfolio-poster {
+
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    padding-left: 405px;
-
+    padding-left: 50px;
     
+    
+}
+
+#portfolio-poster img {
+
+    box-shadow: -90px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 
 
 .projects {
+    position: relative;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100%;
 
+    
+   
 }
 
-.projects p {
-    position: absolute;
+#zeus-summary {
+    display: flex;
+    margin-top: -650px;
+    margin-left: 125px;
+        
+}
+
+#zeus-summary p{
+    
     width: 350px;
-    top: 1400px;
-    left: 1000px;
     font-family: noticia;
-    font-size: 24px;
+    font-size: 26px;
     text-align: left;
     font-style: italic;
     font-weight: bold;
+  
+  
 }
 
 .projects a {
@@ -310,6 +460,7 @@ aside {
 
 
 .project-button {
+
     align-self: center;
     width: 225px;
     flex-direction: column;
@@ -346,6 +497,7 @@ aside {
 
 .divider {
     margin-top: 35px;
+    margin-bottom: 30px;
     width: 15px;
 }
 
@@ -361,35 +513,76 @@ aside {
 
 
 
-#book-cover {
+#mock-site {
 
     display: flex;
     flex-direction: column;
-    position:absolute;
     align-self: flex-end;
     top: 450px;
-    margin-right: 0;
-    width: 900px;
+    padding-right: 50px;
+   
   
 }
 
-#book-cover img {
-    width: 1050px;
-    margin-bottom: -65px;
+#mock-site img {
 
+    height: 450px;
+    width: 630px;
 }
+
+
+
 
 #zeus-project {
 
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    padding-left: 405px;
-    padding-top: 150px;
+    padding-left: 50px;
+    padding-top: 100px;
   
    
     
 }
+
+#zeus-project img {
+
+    box-shadow: -90px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+
+@media only screen and (max-width: 680px) {
+
+    .featured-work {
+        align-items: center;
+    }
+    
+    .projects {
+       
+        display: block;
+        position: relative;
+        margin: 0;
+        margin-bottom: 150px;
+    }
+
+   
+
+    #zeus-summary {
+        display: none;
+    }
+
+    #bn2 {
+        margin-right: -75px;
+    }
+    #btn2 {
+        margin-right: -75px;
+    }
+
+}
+
+
 
 
 
@@ -406,16 +599,17 @@ aside {
 }
 
 .tech {
+    position: relative;
     display: flex;
     justify-content: space-around;
     width: 100%;
-    font-size: 2.8rem;
-    
+    font-size: 3.2rem;
+ 
+
 }
 
 .tech img {
-    min-width: 25px;
-    min-height: 25px;
+ 
     width: 43px;
     height: 43px;
 } 
@@ -425,28 +619,187 @@ aside {
 }
 
 #inspiration-title {
+
     font-family: noticia;
     width: 100%;
     font-size: 1.2rem;
+    margin-top: 55px;
+   
 }
 
 
 .inspiration {
     display: flex;
-    justify-content: space-around;
-    border: 3px dotted blue;
+    flex-direction: column;
     width: 100%;
-    
+    background-color: darkgrey;
+ 
 
 }
 
+#inspiration-pics {
+
+            display: flex;
+            justify-content: space-around;
+
+}
+
+
+.inspiration img {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 250px;
+
+}
+
+#website-temp {
+    
+    width: 400px;
+    height: 265px;
+}
+
+
+@media only screen and (max-width: 680px) {
+
+  .tech {
+
+    
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 25px;
+  }
+
+   .tech i {
+
+        width: 140px;
+   }
+
+   .tech img {
+       padding-right: 50px;
+       padding-top: 10px;
+   }
+   
+    #inspiration-pics {
+
+        flex-direction: column;
+      
+        
+    }
+
+}
+
+
+
+
+
 .footer {
     display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
     justify-content: space-around;
     background-color: black;
     color:white;
     height: 400px;
     width: auto;
     background-size: cover;
-    border: 5px dotted hotpink;
+    font-size: 1.5rem;
+
+}
+
+.footer a {
+
+    font-size: 1rem;
+}
+
+.footer a:hover {
+    
+    color: orangered;
+}
+
+#contact-footer {
+
+    display: flex;
+    justify-content: space-around;
+    width: 1800px;
+    
+}
+
+#mail-phone {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-links {
+
+        display: flex;
+      
+
+}
+
+#contact-links a, p{
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: noticia;
+}
+
+
+
+.vl {
+    border-right: 1px solid white;
+    height: 15px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.coming-soon p {
+    display: flex;
+    justify-content: center;
+    font-size: .9rem;
+    
+}
+
+#footer-divider {
+
+    width: 1800px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+
+#copyright {
+
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 680px) {
+
+    .footer {
+     
+        height: 1200px;
+        text-align: center;
+     
+    }
+
+    
+
+
+    #contact-footer {
+
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+
+    .coming-soon {
+
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+
 }

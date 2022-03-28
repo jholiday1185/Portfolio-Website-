@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/aboutme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./script.js"></script>
+    <title>Justin's Portfolio Website</title>
+</head>
+
+<body>
+    <nav>
+        <h2><strong>Justin Holiday</strong></h2>
+        <ul id="nav-list">
+            <li class="nav-link"><a id=aboutme-nav  href="#">About Me</a></li>
+            <li><a id="projects-nav" class="nav-link" href="#">Projects</a></li>
+            <li><a id="skills-nav" class="nav-link" href="#">Skills</a></li>
+            <li><a id="contact-nav" class="nav-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <section id="about-me">
+            <div class="about-me-container">
+                <div class="about-me-text-container">
+                    <h2>About Me</h2>
+                    <p>
+                       Hi! I'm Justin, front end developer with experience in a variety of different fields including IT managment.  I am currently located outside 
+                       of Pittsburgh running small home care business.
+                    </p>
+                    <p>
+                        I was previously located in Philadelphia where I was the IT director for a charter high schoool for 7 years.  During that time we developed
+                        a culture and infrastructure in order to support a 1 to 1 environment, which helped support a differentiated learning environment leading to higher
+                        overall profiency. 
+                    </p>
+                    <p>
+                       In my free time I like to go to the park and hike with my dog Zeus.  I often make films of Zeus and edit them using final cut pro.  
+                       I also have a respect for all sports but in particular I am a huge Sixers and Eagles fan.  
+                    </p>
+                    <p>
+                        Fun fact! I have visited 9 countries.
+                    </p>
+                </div>
+                <img src="./images/About-me-pic.JPG" alt="A photo of me at the park" id="profile-pic">
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <input type="text" id="mySearch" onkeyup="smartSearch()" placeholder="Search.." title="type in category">
+            <ul id="my-projects">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Mock Site</a></li>
+                <li><a href=#>Zeus Project</a></li>
+            </ul>
+        </section>    
+        <section id="skills">
+            <h2>Skills</h2>
+            <i class="fa fa-html5"></i>
+            <i class="fa fa-git"></i>
+            <i class="fa fa-github"></i>
+            <i class="fa fa-css3"></i>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-js"></i>
+            <i class="fas fa-universal-access"></i>
+            <img src="./images/Adobe_Photoshop_CC_icon BW.png" title="Adobe Photoshop" alt="Adobe Photoshop" id="photoshop">
+            <img src="./images/final-cut-pro bw.png" title="final cut pro logo" alt="Final cut pro logo" id="final-cut-logo">
+        </section>
+
+    </main>
+</body>
+

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./script.js"></script>
+  
     <title>Justin's Portfolio Website</title>
 </head>
 <body>
@@ -21,10 +21,18 @@
             <strong><p>Justin Holiday</p></strong>
         </div>
         <nav id="nav-menu">
-            <a id="nav-home" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">Home</a>
-            <a id="nav-about" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">About</a>
-            <a id="nav-projects" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">Projects</a>
-            <a id="nav-contact" href="#" onmouseover="mouseOverNavLink()" onmouseleave="mouseLeaveNavLink()">Contact</a>
+            <a id="nav-home" href="#">Home</a>
+            <a id="nav-about" href="./aboutme.html">About</a>
+            <div id="nav-projects">
+                <button class="dropbtn" onclick="showNavDrop()">Projects<i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="project-dropdown">
+                    <a href="#">Porfolio Website</a>
+                    <a href="#mock-site">Mock Website</a>
+                    <a href="#zeus-project">The Life Zeus</a>
+                </div>
+            </div>
+            <a href="#contact-links" id="nav-contact">Contact</a>
         </nav>
     </div>    
     <div class="main">
@@ -34,33 +42,26 @@
                 <p>A life long learner developing the skills to lead the next generation.</p>
                 <a href="#">Passion Projects</a>
             </div>
-            <figure id="profile-pic" class="profile">
-                <img src="./images/Profile Pic B&W and color.png" title="profile picture" alt="Picture of Justin Holiday">
-                <figcaption id="autograph">Justin Holiday</figcaption>
-            </figure>
+            <div class="profile">
+                <figure id="profile-pic">
+                    <img src="./images/Profile Pic B&W and color.png" title="profile picture" alt="Picture of Justin Holiday">
+                    <figcaption id="autograph">Justin Holiday</figcaption>
+                </figure>
+            </div>
         </div>
-    </div>    
+        
         <aside id="social-media">
             <div class="icons">
                 <!--insert icons for text-->
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
                 <a href="#" class="fa fa-instagram"></a>
-
+                
             </div>
         </aside>
-        <!--Side Nav that shows when hovering-->
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-        </div>
-       <button class="btn" onclick="openNav()"><i class="fa fa-bars"></i> Open</button>
-        <br>    
         <!--Projects that will be dsiplayed along with tech used to generate them-->
-    <div class="main">    
+       
         <div class="featured-work">
             <H2>Justin Holiday's Latest Projects</H2>
             <div class="projects">
@@ -75,17 +76,7 @@
                     </div>
                     <a href="#" class="buy-now" id="bn1">Buy Now</a>
                 </div>
-                <div id="book-cover">
-                    <img src="./images/Be Great book cover.png" alt="Be Great Book Cover" title="Not actually a book, just a new way to display website with Photoshop">
-                    <div class="project-button" id="btn2">
-                        <a href="#">
-                            <H4>Mock Website</H4>
-                            <hr class="divider">
-                            <H6>Free</H6>
-                        </a>   
-                    </div>
-                    <a href="#" class="buy-now" id="bn2">Buy Now</a>
-                </div>
+                
                 <div id="zeus-project">
                     <img src="./images/Zeus Mountain Cover.png" alt="Pic of Brown Boerbol Mastiff Zeus" title="Boerbol Mastiff Zeus"> 
                     <div class="project-button"  id="btn3"> 
@@ -97,7 +88,18 @@
                     </div>
                     <a href="#" class="buy-now" id="bn3">Buy Now</a>
                 </div>
-                <div>
+                <div id="mock-site">
+                    <img src="./images/BGR8 Jacket BW no backgr.png" alt="Be Great Jacket" title="Not actually a real site, just a new way to display website with Photoshop">
+                    <div class="project-button" id="btn2">
+                        <a href="../flexbox-business-site-starting/index.html">
+                            <H4>Mock Website</H4>
+                            <hr class="divider">
+                            <H6>Free</H6>
+                        </a>   
+                    </div>
+                    <a href="flexbox-business-site-starting/index.html" class="buy-now" id="bn2">Buy Now</a>
+                </div>
+                <div id="zeus-summary">
                     <p>Updated frequently with excerpts from the various adventures of Zeus.  From 11 weeks old until present. Zeus is a South African Boerbol Mastiff that lives in Pittsurgh.
                         <br>
                         <br>
@@ -121,27 +123,52 @@
                 <img src="./images/final-cut-pro bw.png" title="final cut pro logo" alt="Final cut pro logo" id="final-cut-logo">
             </div>
             <!--Section dedicated to examples of other peoples work which can be linked as a reference-->
-            <div id="inspiration-title">
-                <H3>Inspirations</H3>
-            </div>
+            
             <div class="inspiration">
-                <h6>Example 1</h6>
-                <img>
-                <h6>Example 2</h6>
-                <img>
-                <h6>Example 3</h6>
-                <img>
+                <div id="inspiration-title">
+                    <H3>Inspirations</H3>
+                </div>
+                <div id="inspiration-pics">
+                    <a href="#">
+                        <img src="./images/Pic of website template.png" id="website-temp">                
+                    </a>
+                    <a href="">
+                        <img src="./images/codeCademy.jpeg">
+                    </a>
+                    <a href="#">
+                        <img src="./images/Coding with mosh.png.jpeg">
+                    </a>
+                </div>
             </div>
         </div>        
     </div>
     <!--Displays contact information-->
     <div class="footer">
-        <h6>Contact Informaton</h6>
-        
-        <h6>Subscribe to Blog</h6>
-        <!--Add drop down menu to select blog-->
-        <h6>subscribe</h6>     
+        <div id="contact-footer">
+            <div id="mail-phone">
+                <h6>Contact Informaton</h6>
+                <div id="contact-links"> 
+                    <a href="tel:609-217-2539">609-217-2539</a> 
+                    <div class="vl"></div>
+                    <a href="mailto:jus1185@yahoo.com">jus1185@yahoo.com</a> 
+                </div>    
+                <p>Somewhere in Pittsburgh, PA </p>
+            </div>
+            <div class="coming-soon">
+                <h6>Subscribe to Blog</h6>
+                <p>Coming Soon</p>
+            </div>
+            <!--Add drop down menu to select blog-->
+            <div class="coming-soon">
+                <h6>Subscribe to other outlets</h6> 
+                <p>Coming Soon</p>
+            </div>
+        </div>        
+        <hr id="footer-divider">
+        <div id="copyright">    
+            <h6>© 2022 by Justin Holiday. Created with VScode</h6>
+        </div>
     </div>
-   
+    <script src="./script.js"></script>
 </body>
 </html>
